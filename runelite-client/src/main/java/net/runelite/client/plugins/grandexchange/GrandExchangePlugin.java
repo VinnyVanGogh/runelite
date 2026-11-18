@@ -798,6 +798,11 @@ public class GrandExchangePlugin extends Plugin
 		return examine.substring(0, from - 1) + "...";
 	}
 
+	String getGeLinkText()
+	{
+		return runeLiteConfig.useWikiItemPrices() ? "Open RuneScape Wiki prices website" : "Open Grand Exchange website";
+	}
+
 	void openGeLink(String name, int itemId)
 	{
 		final String url = runeLiteConfig.useWikiItemPrices() ?

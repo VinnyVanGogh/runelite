@@ -249,7 +249,7 @@ public class GrandExchangeOfferSlot extends JPanel
 			final JPopupMenu popupMenu = new JPopupMenu();
 			popupMenu.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-			final JMenuItem openGeLink = new JMenuItem("Open Grand Exchange website");
+			final JMenuItem openGeLink = new JMenuItem(grandExchangePlugin.getGeLinkText());
 			openGeLink.addActionListener(e -> grandExchangePlugin.openGeLink(offerItem.getMembersName(), offerItem.getId()));
 			popupMenu.add(openGeLink);
 

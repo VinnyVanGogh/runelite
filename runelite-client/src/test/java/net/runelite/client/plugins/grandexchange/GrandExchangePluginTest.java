@@ -123,6 +123,16 @@ public class GrandExchangePluginTest
 	}
 
 	@Test
+	public void testGeLinkText()
+	{
+		when(runeLiteConfig.useWikiItemPrices()).thenReturn(true);
+		assertEquals("Open RuneScape Wiki prices website", grandExchangePlugin.getGeLinkText());
+
+		when(runeLiteConfig.useWikiItemPrices()).thenReturn(false);
+		assertEquals("Open Grand Exchange website", grandExchangePlugin.getGeLinkText());
+	}
+
+	@Test
 	public void testCancelTrade()
 	{
 		SavedOffer savedOffer = new SavedOffer();
